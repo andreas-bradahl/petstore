@@ -9,7 +9,7 @@ CREATE COMPUTE MODULE getPetById_CreateJsonOutput
 		IF petId = 1 THEN
 			SET OutputRoot = InputRoot;
 			SET OutputRoot.JSON.Data.pet.id = 1;
-			SET OutputRoot.JSON.Data.pet.category = 'dog';
+			SET OutputRoot.JSON.Data.pet.category = 'dogs';
 			SET OutputRoot.JSON.Data.pet.name = 'Fant';
 			CREATE FIELD OutputRoot.JSON.Data.pet.photoUrls IDENTITY (JSON.Array)photoUrls;
 			CREATE LASTCHILD OF OutputRoot.JSON.Data.pet.photoUrls NAME 'Item' VALUE 'https://i.pinimg.com/originals/23/bd/e0/23bde0c47d98dfea2e972b535e116962.jpg';
@@ -22,7 +22,7 @@ CREATE COMPUTE MODULE getPetById_CreateJsonOutput
 		ELSEIF petId = 2 THEN
 			SET OutputRoot = InputRoot;
 			SET OutputRoot.JSON.Data.pet.id = 2;
-			SET OutputRoot.JSON.Data.pet.category = 'cat';
+			SET OutputRoot.JSON.Data.pet.category = 'cats';
 			SET OutputRoot.JSON.Data.pet.name = 'Sakkeus';
 			CREATE FIELD OutputRoot.JSON.Data.pet.photoUrls IDENTITY (JSON.Array)photoUrls;
 			CREATE LASTCHILD OF OutputRoot.JSON.Data.pet.photoUrls NAME 'Item' VALUE 'https://www.katteelskere.com/wp-content/uploads/2017/11/Ragdoll.jpg';
