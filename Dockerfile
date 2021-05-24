@@ -1,5 +1,5 @@
 FROM ibmcom/ace-server:latest
-COPY petstore-api /home/aceuser/petstore-api
+COPY source/petstore-api /home/aceuser/petstore-api
 RUN export LICENSE="accept" \
     && source /opt/ibm/ace-11/server/bin/mqsiprofile \
     && mkdir /home/aceuser/bars \
