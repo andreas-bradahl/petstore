@@ -10,7 +10,7 @@ CREATE COMPUTE MODULE getPetById_CreateJsonOutput
 			SET OutputRoot = InputRoot;
 			SET OutputRoot.JSON.Data.pet.id = 1;
 			SET OutputRoot.JSON.Data.pet.category = 'dogs';
-			SET OutputRoot.JSON.Data.pet.name = 'Tass';
+			SET OutputRoot.JSON.Data.pet.name = 'Fant';
 			CREATE FIELD OutputRoot.JSON.Data.pet.photoUrls IDENTITY (JSON.Array)photoUrls;
 			CREATE LASTCHILD OF OutputRoot.JSON.Data.pet.photoUrls NAME 'Item' VALUE 'https://i.pinimg.com/originals/23/bd/e0/23bde0c47d98dfea2e972b535e116962.jpg';
 			CREATE LASTCHILD OF OutputRoot.JSON.Data.pet.photoUrls NAME 'Item' VALUE 'https://www.google.com/url?sa=i&url=http%3A%2F%2Ftruedogsphoto.com%2Fsupersize&psig=AOvVaw0yUCfLnoDdGHmXJtfdSABf&ust=1621934199005000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDGrPH94fACFQAAAAAdAAAAABAT';
