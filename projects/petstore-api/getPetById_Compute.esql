@@ -1,0 +1,14 @@
+
+
+CREATE COMPUTE MODULE getPetById_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE envLoggingRef REFERENCE TO Environment.Variables.Logging; 
+		
+		CALL writeLog('Received http request for pet with ID 1', envLoggingRef);
+		
+		SET OutputRoot = InputRoot;
+		
+		RETURN TRUE;
+	END;
+END MODULE;

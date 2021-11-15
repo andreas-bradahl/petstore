@@ -3,6 +3,7 @@
 	<name>Petstore</name>
 	<comment></comment>
 	<projects>
+		<project>tip000-common-logging</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
